@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D8AD5616-8C17-4932-A638-416B6EA627F3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>samplePrototype</RootNamespace>
+    <AssemblyName>samplePrototype</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.4.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector NET 8.4\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cashierMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cashierMenu.Designer.cs">
+      <DependentUpon>cashierMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="employeeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employeeList.Designer.cs">
+      <DependentUpon>employeeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loginForm.Designer.cs">
+      <DependentUpon>loginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="managerMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="managerMenu.Designer.cs">
+      <DependentUpon>managerMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="orderHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="orderHistory.Designer.cs">
+      <DependentUpon>orderHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="orderMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="orderMenu.Designer.cs">
+      <DependentUpon>orderMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="receiptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="receiptForm.Designer.cs">
+      <DependentUpon>receiptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="transactionMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="transactionMenu.Designer.cs">
+      <DependentUpon>transactionMenu.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="cashierMenu.resx">
+      <DependentUpon>cashierMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employeeList.resx">
+      <DependentUpon>employeeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loginForm.resx">
+      <DependentUpon>loginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="managerMenu.resx">
+      <DependentUpon>managerMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="orderHistory.resx">
+      <DependentUpon>orderHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="orderMenu.resx">
+      <DependentUpon>orderMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="receiptForm.resx">
+      <DependentUpon>receiptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="transactionMenu.resx">
+      <DependentUpon>transactionMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
